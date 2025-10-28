@@ -1,0 +1,11 @@
+LOCKOUT_MAX_ATTEMPTS = 5
+SYSTEM_FREEZE_SECONDS = 60
+AUTO_UNLOCK_SECONDS = 180
+USERS_DB_ENC_PATH = "data/users.json.enc"
+FERNET_KEY_PATH = "data/key.key"
+LOG_PATH = "logs/security.log"
+PROTECTED_DIR = "protected_files"
+PASSWORD_HASH_ROUNDS = 12
+GUI_TITLE = "Basic Security System"
+USER_LOCK_SECONDS = 180          # per-user lock duration
+SYSTEM_FREEZE_SECONDS = 60       # system-wide freeze
