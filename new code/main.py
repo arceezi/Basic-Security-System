@@ -15,7 +15,7 @@ def main():
     parser.add_argument("--cli", action="store_true", help="Run in CLI mode")
     args = parser.parse_args()
 
-    # Ensure admin exists (default password set inside bootstrap)
+
     bootstrap_admin()
 
     if args.cli:

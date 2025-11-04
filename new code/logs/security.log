@@ -1,0 +1,22 @@
+{"ts": "2025-10-28T17:37:10.948863+00:00", "event": "REGISTER_SUCCESS", "username": "admin", "meta": {"bootstrap": true}}
+{"ts": "2025-10-28T17:49:22.210180+00:00", "event": "LOGIN_FAIL", "meta": {"reason": "no_such_user"}}
+{"ts": "2025-10-28T17:49:39.484670+00:00", "event": "REGISTER_SUCCESS", "username": "user123"}
+{"ts": "2025-10-28T17:49:47.190764+00:00", "event": "LOGIN_SUCCESS", "username": "user123"}
+{"ts": "2025-10-28T17:50:12.117777+00:00", "event": "LOGOUT", "username": "user123"}
+{"ts": "2025-10-28T17:50:24.729721+00:00", "event": "LOGIN_SUCCESS", "username": "admin"}
+{"ts": "2025-10-28T17:50:50.303626+00:00", "event": "ADMIN_LIST_USERS", "username": "admin", "meta": {"count": 2}}
+{"ts": "2025-10-28T17:51:03.562897+00:00", "event": "UNLOCK_MANUAL", "username": "admin"}
+{"ts": "2025-10-28T17:51:05.096790+00:00", "event": "UNLOCK_MANUAL", "username": "admin"}
+{"ts": "2025-10-28T17:51:06.037333+00:00", "event": "UNLOCK_MANUAL", "username": "admin"}
+{"ts": "2025-10-28T17:51:17.575677+00:00", "event": "LOGOUT", "username": "admin"}
+{"ts": "2025-10-28T17:51:26.832765+00:00", "event": "LOGIN_FAIL", "username": "user123", "meta": {"attempt": 1}}
+{"ts": "2025-10-28T17:51:28.736506+00:00", "event": "LOGIN_FAIL", "username": "user123", "meta": {"attempt": 2}}
+{"ts": "2025-10-28T17:51:29.574439+00:00", "event": "LOGIN_FAIL", "username": "user123", "meta": {"attempt": 3}}
+{"ts": "2025-10-28T17:51:30.400609+00:00", "event": "LOGIN_FAIL", "username": "user123", "meta": {"attempt": 4}}
+{"ts": "2025-10-28T17:51:30.410619+00:00", "event": "LOCK_WARN", "username": "user123", "meta": {"attempts": 4, "attempts_left": 1}}
+{"ts": "2025-10-28T17:51:32.207862+00:00", "event": "LOGIN_FAIL", "username": "user123", "meta": {"attempt": 5}}
+{"ts": "2025-10-28T17:51:32.219860+00:00", "event": "USER_LOCK_ON", "username": "user123", "meta": {"seconds": 180}}
+{"ts": "2025-10-28T17:51:32.220861+00:00", "event": "FREEZE_ON", "meta": {"seconds": 60}}
+{"ts": "2025-10-28T18:14:45.338268+00:00", "event": "USER_LOCK_OFF", "username": "user123"}
+{"ts": "2025-10-28T18:14:45.544829+00:00", "event": "LOGIN_SUCCESS", "username": "user123"}
+{"ts": "2025-10-28T18:14:53.988231+00:00", "event": "LOGOUT", "username": "user123"}
