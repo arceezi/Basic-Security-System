@@ -1,28 +1,3 @@
 {"ts": "2025-10-28T17:06:00.129961+00:00", "event": "REGISTER_SUCCESS", "username": "admin", "meta": {"bootstrap": true}}
-2025-10-29 01:08:24,165 - INFO - Initialized user storage.
-{"ts": "2025-10-28T17:12:08.850112+00:00", "event": "REGISTER_SUCCESS", "username": "ralf"}
-{"ts": "2025-10-28T17:12:14.811146+00:00", "event": "LOGIN_SUCCESS", "username": "ralf"}
-{"ts": "2025-10-28T17:14:49.726516+00:00", "event": "LOGIN_SUCCESS", "username": "ralf"}
-{"ts": "2025-10-28T17:15:16.330411+00:00", "event": "LOGOUT", "username": "ralf"}
-{"ts": "2025-10-28T17:15:23.848696+00:00", "event": "LOGIN_SUCCESS", "username": "ralf"}
-{"ts": "2025-10-28T17:15:30.878698+00:00", "event": "LOGOUT", "username": "ralf"}
-{"ts": "2025-10-28T17:15:39.014707+00:00", "event": "LOGIN_SUCCESS", "username": "admin"}
-{"ts": "2025-10-28T17:15:44.911695+00:00", "event": "ADMIN_LIST_USERS", "username": "admin", "meta": {"count": 2}}
-{"ts": "2025-10-28T17:15:56.473712+00:00", "event": "UNLOCK_MANUAL", "username": "admin"}
-{"ts": "2025-10-28T17:15:58.916702+00:00", "event": "UNLOCK_MANUAL", "username": "admin"}
-{"ts": "2025-10-28T17:16:01.544228+00:00", "event": "UNLOCK_MANUAL", "username": "admin"}
-{"ts": "2025-10-28T17:16:05.501232+00:00", "event": "ADMIN_LIST_USERS", "username": "admin", "meta": {"count": 2}}
-{"ts": "2025-10-28T17:16:11.557503+00:00", "event": "UNLOCK_MANUAL", "username": "admin"}
-{"ts": "2025-10-28T17:16:18.318763+00:00", "event": "ADMIN_LIST_USERS", "username": "admin", "meta": {"count": 2}}
-{"ts": "2025-10-28T17:39:05.582612+00:00", "event": "LOGIN_SUCCESS", "username": "ralf"}
-{"ts": "2025-10-28T17:43:53.282556+00:00", "event": "LOGIN_SUCCESS", "username": "ralf"}
-{"ts": "2025-10-28T17:50:48.847620+00:00", "event": "LOGIN_SUCCESS", "username": "ralf"}
-{"ts": "2025-10-28T17:54:49.777775+00:00", "event": "LOGOUT", "username": "ralf"}
-{"ts": "2025-10-28T17:54:55.696468+00:00", "event": "LOGIN_FAIL", "username": "ralf", "meta": {"attempt": 1}}
-{"ts": "2025-10-28T17:55:02.110544+00:00", "event": "LOGIN_FAIL", "username": "ralf", "meta": {"attempt": 2}}
-{"ts": "2025-10-28T17:55:03.285560+00:00", "event": "LOGIN_FAIL", "username": "ralf", "meta": {"attempt": 3}}
-{"ts": "2025-10-28T17:55:04.097552+00:00", "event": "LOGIN_FAIL", "username": "ralf", "meta": {"attempt": 4}}
-{"ts": "2025-10-28T17:55:04.098551+00:00", "event": "LOCK_WARN", "username": "ralf", "meta": {"attempts": 4, "attempts_left": 1}}
-{"ts": "2025-10-28T17:55:05.627546+00:00", "event": "LOGIN_FAIL", "username": "ralf", "meta": {"attempt": 5}}
-{"ts": "2025-10-28T17:55:05.629543+00:00", "event": "USER_LOCK_ON", "username": "ralf", "meta": {"seconds": 180}}
-{"ts": "2025-10-28T17:55:05.630553+00:00", "event": "FREEZE_ON", "meta": {"seconds": 60}}
+{"ts": "2025-10-28T17:08:01.086738+00:00", "event": "LOGIN_SUCCESS", "username": "admin"}
+{"ts": "2025-10-28T17:08:47.667856+00:00", "event": "ADMIN_LIST_USERS", "username": "admin", "meta": {"count": 1}}
