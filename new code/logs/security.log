@@ -20,3 +20,12 @@
 {"ts": "2025-10-28T18:14:45.338268+00:00", "event": "USER_LOCK_OFF", "username": "user123"}
 {"ts": "2025-10-28T18:14:45.544829+00:00", "event": "LOGIN_SUCCESS", "username": "user123"}
 {"ts": "2025-10-28T18:14:53.988231+00:00", "event": "LOGOUT", "username": "user123"}
+{"ts": "2025-11-05T17:38:19.613696+00:00", "event": "REGISTER_SUCCESS", "username": "admin", "meta": {"bootstrap": true}}
+{"ts": "2025-11-05T17:44:34.888831+00:00", "event": "LOGIN_FAIL", "username": "ralf", "meta": {"reason": "no_such_user"}}
+{"ts": "2025-11-05T17:44:49.252979+00:00", "event": "LOGIN_FAIL", "username": "ralf", "meta": {"reason": "no_such_user"}}
+{"ts": "2025-11-05T17:44:58.139681+00:00", "event": "LOGIN_SUCCESS", "username": "admin"}
+{"ts": "2025-11-05T17:45:01.905800+00:00", "event": "ADMIN_LIST_USERS", "username": "admin", "meta": {"count": 1}}
+{"ts": "2025-11-05T17:45:23.649924+00:00", "event": "LOGIN_FAIL", "username": "admin", "meta": {"reason": "already_logged_in"}}
+{"ts": "2025-11-05T17:45:50.882505+00:00", "event": "LOGOUT", "username": "admin"}
+{"ts": "2025-11-05T17:45:54.337315+00:00", "event": "LOGIN_SUCCESS", "username": "admin"}
+{"ts": "2025-11-05T17:46:42.869146+00:00", "event": "LOGIN_FAIL", "username": "ralf", "meta": {"reason": "no_such_user"}}

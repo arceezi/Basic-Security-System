@@ -46,3 +46,28 @@
 {"ts": "2025-11-05T16:53:21.155788+00:00", "event": "FREEZE_ON", "meta": {"seconds": 60}}
 {"ts": "2025-11-05T16:53:26.729148+00:00", "event": "LOGOUT", "username": "admin"}
 {"ts": "2025-11-05T16:56:09.369677+00:00", "event": "LOGIN_SUCCESS", "username": "admin"}
+{"ts": "2025-11-05T17:10:47.364040+00:00", "event": "REGISTER_SUCCESS", "username": "admin", "meta": {"bootstrap": true}}
+{"ts": "2025-11-05T17:11:08.006597+00:00", "event": "LOGIN_SUCCESS", "username": "admin"}
+{"ts": "2025-11-05T17:11:11.900246+00:00", "event": "ADMIN_LIST_USERS", "username": "admin", "meta": {"count": 1}}
+{"ts": "2025-11-05T17:11:17.419723+00:00", "event": "LOGOUT", "username": "admin"}
+{"ts": "2025-11-05T17:11:26.590968+00:00", "event": "REGISTER_SUCCESS", "username": "ralf"}
+{"ts": "2025-11-05T17:11:33.713769+00:00", "event": "LOGIN_SUCCESS", "username": "ralf"}
+{"ts": "2025-11-05T17:12:12.490398+00:00", "event": "LOGOUT", "username": "ralf"}
+{"ts": "2025-11-05T17:12:19.975804+00:00", "event": "LOGIN_SUCCESS", "username": "admin"}
+{"ts": "2025-11-05T17:13:25.672895+00:00", "event": "ADMIN_LIST_USERS", "username": "admin", "meta": {"count": 2}}
+{"ts": "2025-11-05T17:14:42.221015+00:00", "event": "LOGIN_SUCCESS", "username": "ralf"}
+{"ts": "2025-11-05T17:18:53.917298+00:00", "event": "LOGIN_SUCCESS", "username": "admin"}
+{"ts": "2025-11-05T17:19:00.662118+00:00", "event": "ADMIN_LIST_USERS", "username": "admin", "meta": {"count": 2}}
+{"ts": "2025-11-05T17:46:13.861356+00:00", "event": "LOGIN_SUCCESS", "username": "ralf"}
+{"ts": "2025-11-05T17:53:08.224001+00:00", "event": "LOGIN_SUCCESS", "username": "ralf"}
+{"ts": "2025-11-05T17:53:29.623340+00:00", "event": "LOGIN_SUCCESS", "username": "ralf"}
+{"ts": "2025-11-05T17:53:59.317609+00:00", "event": "LOGIN_FAIL", "username": "ralf", "meta": {"reason": "already_logged_in"}}
+{"ts": "2025-11-05T17:54:15.938557+00:00", "event": "LOGOUT", "username": "ralf"}
+{"ts": "2025-11-05T17:54:18.768864+00:00", "event": "LOGIN_SUCCESS", "username": "ralf"}
+{"ts": "2025-11-05T17:54:28.548753+00:00", "event": "LOGOUT", "username": "ralf"}
+{"ts": "2025-11-05T17:54:37.041351+00:00", "event": "LOGIN_SUCCESS", "username": "ralf"}
+{"ts": "2025-11-05T17:54:46.191152+00:00", "event": "LOGIN_SUCCESS", "username": "admin"}
+{"ts": "2025-11-05T17:54:49.749245+00:00", "event": "LOGOUT", "username": "admin"}
+{"ts": "2025-11-05T17:54:54.922354+00:00", "event": "LOGIN_FAIL", "username": "ralf", "meta": {"reason": "already_logged_in"}}
+{"ts": "2025-11-05T17:57:09.582571+00:00", "event": "LOGIN_SUCCESS", "username": "admin"}
+{"ts": "2025-11-05T17:57:44.931052+00:00", "event": "ADMIN_LIST_USERS", "username": "admin", "meta": {"count": 2}}

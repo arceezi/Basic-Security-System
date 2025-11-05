@@ -32,8 +32,16 @@ class AdminFrame(ttk.Frame):
         self.freeze_status = ttk.Label(self, text="")
         self.freeze_status.pack(anchor="w", pady=(4,0))
 
-        self.out = tk.Text(self, height=12)
-        self.out.pack(fill="both", expand=True, pady=8)
+        self.user_table = ttk.Treeview(self, columns=("username", "is_admin", "failed_attempts", "last_login_at"), show="headings", height=12)
+        self.user_table.heading("username", text="Username")
+        self.user_table.heading("is_admin", text="Admin")
+        self.user_table.heading("failed_attempts", text="Failed Attempts")
+        self.user_table.heading("last_login_at", text="Last Login")
+        self.user_table.column("username", width=120)
+        self.user_table.column("is_admin", width=60, anchor="center")
+        self.user_table.column("failed_attempts", width=100, anchor="center")
+        self.user_table.column("last_login_at", width=160)
+        self.user_table.pack(fill="both", expand=True, pady=8)
 
         self._refresh_freeze_status()
 
@@ -66,9 +74,9 @@ class AdminFrame(ttk.Frame):
 
     def on_list(self):
         users = list_users()
-        self.out.delete("1.0", tk.END)
+        self.user_table.delete(*self.user_table.get_children())
         for u in users:
-            self.out.insert("end", f"{u['username']}\tadmin={u['is_admin']}\tfails={u['failed_attempts']}\tlast={u['last_login_at']}\n")
+            self.user_table.insert("", "end", values=(u["username"], "Yes" if u["is_admin"] else "No", u["failed_attempts"], u["last_login_at"] or "-"))
 
     def on_unlock(self):
         unlock_system()

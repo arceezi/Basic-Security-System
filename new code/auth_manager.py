@@ -86,15 +86,25 @@ def authenticate(username: str, password: str) -> Tuple[bool, str]:
         remain = user_lock_remaining_seconds(user)
         return False, f"Account temporarily locked. Try again in {remain}s."
 
-    # 4) Verify password
+    # 4) Check if user is already logged in elsewhere
+    if not session.can_login(username):
+        log_event("LOGIN_FAIL", username, reason="already_logged_in")
+        return False, "This user is already logged in from another location"
+    
+    # 5) Verify password
     ok = bcrypt.checkpw(password.encode(), user["password_hash"].encode())
     if ok:
         user["failed_attempts"] = 0
         user["last_login_at"] = _now_iso()
         upsert_user(user)
-        session.login(username)
-        log_event("LOGIN_SUCCESS", username)
-        return True, "Login successful"
+        try:
+            session.login(username)
+            log_event("LOGIN_SUCCESS", username)
+            return True, "Login successful"
+        except PermissionError as e:
+            # Handle race condition where user logged in between our check and login
+            log_event("LOGIN_FAIL", username, reason="race_condition")
+            return False, str(e)
 
     # 5) Handle failure: bump attempts, warn/lock/freeze
     attempts = int(user.get("failed_attempts", 0)) + 1
