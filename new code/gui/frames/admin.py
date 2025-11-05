@@ -1,6 +1,7 @@
 import tkinter as tk
 import tkinter.ttk as ttk
-from admin import reset_password, list_users, unlock_system
+from admin import reset_password, list_users, unlock_system, lock_system
+import tkinter as tk
 
 class AdminFrame(ttk.Frame):
     def __init__(self, parent, app):
@@ -17,15 +18,51 @@ class AdminFrame(ttk.Frame):
         ttk.Button(section, text="Reset", command=self.on_reset).pack(side="left", padx=4)
 
         ttk.Button(self, text="List Users", command=self.on_list).pack(anchor="w", pady=(4,0))
-        ttk.Button(self, text="Unlock System", command=self.on_unlock).pack(anchor="w", pady=(4,12))
+
+        lock_frame = ttk.Frame(self)
+        lock_frame.pack(anchor="w", pady=(4,0), fill="x")
+        ttk.Button(lock_frame, text="Lock System", command=self.on_lock).pack(side="left")
+        self.lock_secs_var = tk.StringVar()
+        ttk.Entry(lock_frame, textvariable=self.lock_secs_var, width=6).pack(side="left", padx=(6,0))
+        ttk.Label(lock_frame, text="seconds (blank for default)").pack(side="left", padx=(6,0))
+
+        ttk.Button(self, text="Unlock System", command=self.on_unlock).pack(anchor="w", pady=(6,12))
         ttk.Button(self, text="Back", command=self.app.show_files).pack(anchor="w")
+
+        self.freeze_status = ttk.Label(self, text="")
+        self.freeze_status.pack(anchor="w", pady=(4,0))
 
         self.out = tk.Text(self, height=12)
         self.out.pack(fill="both", expand=True, pady=8)
 
+        self._refresh_freeze_status()
+
+    def _refresh_freeze_status(self):
+        from auth_manager import is_system_frozen, freeze_remaining_seconds
+        if is_system_frozen():
+            secs = freeze_remaining_seconds()
+            self.freeze_status.config(text=f"System is LOCKED (frozen) for {secs if secs else '?'} seconds")
+        else:
+            self.freeze_status.config(text="System is UNLOCKED (not frozen)")
+        self.after(1000, self._refresh_freeze_status)
+
     def on_reset(self):
         ok, msg = reset_password(self.u_var.get().strip(), self.p_var.get().strip())
         self.app.set_status(msg)
+        self.app.show_toast(msg)
+
+    def on_lock(self):
+        s = self.lock_secs_var.get().strip()
+        try:
+            secs = int(s) if s else None
+        except Exception:
+            self.app.set_status("Invalid seconds value")
+            self.app.show_toast("Invalid seconds value")
+            return
+        lock_system(secs)
+        msg = f"System locked for {secs if secs else 'default'} seconds"
+        self.app.set_status(msg)
+        self.app.show_toast(msg)
 
     def on_list(self):
         users = list_users()
@@ -35,4 +72,6 @@ class AdminFrame(ttk.Frame):
 
     def on_unlock(self):
         unlock_system()
-        self.app.set_status("System unlocked")
+        msg = "System unlocked"
+        self.app.set_status(msg)
+        self.app.show_toast(msg)
