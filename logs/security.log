@@ -1,3 +1,6 @@
 {"ts": "2025-10-28T17:06:00.129961+00:00", "event": "REGISTER_SUCCESS", "username": "admin", "meta": {"bootstrap": true}}
 {"ts": "2025-10-28T17:08:01.086738+00:00", "event": "LOGIN_SUCCESS", "username": "admin"}
 {"ts": "2025-10-28T17:08:47.667856+00:00", "event": "ADMIN_LIST_USERS", "username": "admin", "meta": {"count": 1}}
+{"ts": "2025-11-04T14:11:26.666559+00:00", "event": "LOGIN_SUCCESS", "username": "admin"}
+{"ts": "2025-11-06T07:13:26.872603+00:00", "event": "LOGIN_SUCCESS", "username": "admin"}
+{"ts": "2025-11-06T07:13:38.003753+00:00", "event": "LOGOUT", "username": "admin"}
