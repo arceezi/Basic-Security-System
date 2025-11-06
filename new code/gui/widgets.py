@@ -26,3 +26,17 @@ class Banner(ttk.Frame):
 
     def hide(self):
         self.pack_forget()
+
+class Toast(tk.Toplevel):
+    def __init__(self, parent, message, duration=2000):
+        super().__init__(parent)
+        self.wm_overrideredirect(True)
+        self.configure(bg="#333")
+        label = tk.Label(self, text=message, bg="#333", fg="#fff", font=("Segoe UI", 10))
+        label.pack(ipadx=16, ipady=8)
+        self.after(duration, self.destroy)
+        self.update_idletasks()
+        # Position bottom right of parent
+        x = parent.winfo_rootx() + parent.winfo_width() - self.winfo_width() - 30
+        y = parent.winfo_rooty() + parent.winfo_height() - self.winfo_height() - 30
+        self.geometry(f"+{x}+{y}")

@@ -3,6 +3,9 @@ from user_store import get_all_users, get_user, upsert_user
 from session import session
 from logger import log_event
 import bcrypt
+from typing import Optional
+from datetime import datetime, timezone, timedelta
+from auth_manager import maybe_trigger_freeze
 
 
 def require_admin() -> None:
@@ -45,6 +48,18 @@ def unlock_system() -> None:
     from session import session as sess
     sess.clear_freeze()
     log_event("UNLOCK_MANUAL", session.get_current_user())
+
+
+def lock_system(seconds: Optional[int] = None) -> Optional[int]:
+    """Manually lock the system (freeze). If seconds is None use default freeze seconds via maybe_trigger_freeze()."""
+    require_admin()
+    if seconds is None:
+        return maybe_trigger_freeze()
+    until = datetime.now(timezone.utc) + timedelta(seconds=seconds)
+    from session import session as sess
+    sess.freeze_until(until.isoformat())
+    log_event("LOCK_MANUAL", session.get_current_user(), seconds=seconds)
+    return seconds
 
 
 def set_user_locked_until(username: str, iso_ts: str | None) -> None:

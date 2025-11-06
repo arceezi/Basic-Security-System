@@ -1,6 +1,73 @@
 {"ts": "2025-10-28T17:06:00.129961+00:00", "event": "REGISTER_SUCCESS", "username": "admin", "meta": {"bootstrap": true}}
 {"ts": "2025-10-28T17:08:01.086738+00:00", "event": "LOGIN_SUCCESS", "username": "admin"}
 {"ts": "2025-10-28T17:08:47.667856+00:00", "event": "ADMIN_LIST_USERS", "username": "admin", "meta": {"count": 1}}
-{"ts": "2025-11-04T14:11:26.666559+00:00", "event": "LOGIN_SUCCESS", "username": "admin"}
-{"ts": "2025-11-06T07:13:26.872603+00:00", "event": "LOGIN_SUCCESS", "username": "admin"}
-{"ts": "2025-11-06T07:13:38.003753+00:00", "event": "LOGOUT", "username": "admin"}
+{"ts": "2025-11-05T15:53:08.664051+00:00", "event": "LOGIN_SUCCESS", "username": "admin"}
+{"ts": "2025-11-05T15:53:24.671826+00:00", "event": "ADMIN_LIST_USERS", "username": "admin", "meta": {"count": 1}}
+{"ts": "2025-11-05T15:53:32.766945+00:00", "event": "LOGOUT", "username": "admin"}
+{"ts": "2025-11-05T15:54:05.521172+00:00", "event": "LOGIN_SUCCESS", "username": "admin"}
+{"ts": "2025-11-05T16:06:06.426735+00:00", "event": "LOGIN_SUCCESS", "username": "admin"}
+{"ts": "2025-11-05T16:32:59.368696+00:00", "event": "LOGIN_SUCCESS", "username": "admin"}
+{"ts": "2025-11-05T16:34:58.510995+00:00", "event": "FREEZE_ON", "meta": {"seconds": 60}}
+{"ts": "2025-11-05T16:35:04.059029+00:00", "event": "UNLOCK_MANUAL", "username": "admin"}
+{"ts": "2025-11-05T16:35:05.812722+00:00", "event": "FREEZE_ON", "meta": {"seconds": 60}}
+{"ts": "2025-11-05T16:35:48.781344+00:00", "event": "UNLOCK_MANUAL", "username": "admin"}
+{"ts": "2025-11-05T16:35:58.212052+00:00", "event": "UNLOCK_MANUAL", "username": "admin"}
+{"ts": "2025-11-05T16:35:59.193203+00:00", "event": "FREEZE_ON", "meta": {"seconds": 60}}
+{"ts": "2025-11-05T16:36:18.167830+00:00", "event": "LOGOUT", "username": "admin"}
+{"ts": "2025-11-05T16:36:53.868336+00:00", "event": "LOGIN_FAIL", "username": "adminAgain", "meta": {"reason": "no_such_user"}}
+{"ts": "2025-11-05T16:36:58.581348+00:00", "event": "LOGIN_FAIL", "username": "adminAgain", "meta": {"reason": "no_such_user"}}
+{"ts": "2025-11-05T16:37:02.340177+00:00", "event": "LOGIN_FAIL", "username": "adminAgain", "meta": {"reason": "no_such_user"}}
+{"ts": "2025-11-05T16:37:04.797116+00:00", "event": "LOGIN_FAIL", "username": "adminAgain", "meta": {"reason": "no_such_user"}}
+{"ts": "2025-11-05T16:37:05.421850+00:00", "event": "LOGIN_FAIL", "username": "adminAgain", "meta": {"reason": "no_such_user"}}
+{"ts": "2025-11-05T16:37:05.954477+00:00", "event": "LOGIN_FAIL", "username": "adminAgain", "meta": {"reason": "no_such_user"}}
+{"ts": "2025-11-05T16:37:06.286331+00:00", "event": "LOGIN_FAIL", "username": "adminAgain", "meta": {"reason": "no_such_user"}}
+{"ts": "2025-11-05T16:37:06.605163+00:00", "event": "LOGIN_FAIL", "username": "adminAgain", "meta": {"reason": "no_such_user"}}
+{"ts": "2025-11-05T16:37:09.334530+00:00", "event": "LOGIN_FAIL", "username": "adminAgain", "meta": {"reason": "no_such_user"}}
+{"ts": "2025-11-05T16:37:11.371426+00:00", "event": "LOGIN_FAIL", "username": "adminAgain", "meta": {"reason": "no_such_user"}}
+{"ts": "2025-11-05T16:37:15.563467+00:00", "event": "LOGIN_FAIL", "username": "admin", "meta": {"attempt": 1}}
+{"ts": "2025-11-05T16:37:18.998430+00:00", "event": "LOGIN_FAIL", "username": "admin", "meta": {"attempt": 2}}
+{"ts": "2025-11-05T16:37:22.244183+00:00", "event": "LOGIN_FAIL", "username": "admina", "meta": {"reason": "no_such_user"}}
+{"ts": "2025-11-05T16:37:25.956381+00:00", "event": "LOGIN_FAIL", "username": "admin", "meta": {"attempt": 3}}
+{"ts": "2025-11-05T16:37:28.331707+00:00", "event": "LOGIN_FAIL", "username": "admin", "meta": {"attempt": 4}}
+{"ts": "2025-11-05T16:37:28.331707+00:00", "event": "LOCK_WARN", "username": "admin", "meta": {"attempts": 4, "attempts_left": 1}}
+{"ts": "2025-11-05T16:37:38.835476+00:00", "event": "LOGIN_SUCCESS", "username": "admin"}
+{"ts": "2025-11-05T16:38:05.792896+00:00", "event": "LOGIN_SUCCESS", "username": "admin"}
+{"ts": "2025-11-05T16:40:12.827304+00:00", "event": "LOGIN_SUCCESS", "username": "admin"}
+{"ts": "2025-11-05T16:51:20.416547+00:00", "event": "LOGIN_SUCCESS", "username": "admin"}
+{"ts": "2025-11-05T16:51:26.531095+00:00", "event": "UNLOCK_MANUAL", "username": "admin"}
+{"ts": "2025-11-05T16:51:27.703791+00:00", "event": "FREEZE_ON", "meta": {"seconds": 60}}
+{"ts": "2025-11-05T16:51:35.168218+00:00", "event": "UNLOCK_MANUAL", "username": "admin"}
+{"ts": "2025-11-05T16:51:40.369997+00:00", "event": "FREEZE_ON", "meta": {"seconds": 60}}
+{"ts": "2025-11-05T16:52:05.536636+00:00", "event": "LOGIN_SUCCESS", "username": "admin"}
+{"ts": "2025-11-05T16:52:13.350122+00:00", "event": "FREEZE_ON", "meta": {"seconds": 60}}
+{"ts": "2025-11-05T16:52:17.209935+00:00", "event": "LOGOUT", "username": "admin"}
+{"ts": "2025-11-05T16:53:13.018466+00:00", "event": "LOGIN_SUCCESS", "username": "admin"}
+{"ts": "2025-11-05T16:53:19.588464+00:00", "event": "UNLOCK_MANUAL", "username": "admin"}
+{"ts": "2025-11-05T16:53:21.155788+00:00", "event": "FREEZE_ON", "meta": {"seconds": 60}}
+{"ts": "2025-11-05T16:53:26.729148+00:00", "event": "LOGOUT", "username": "admin"}
+{"ts": "2025-11-05T16:56:09.369677+00:00", "event": "LOGIN_SUCCESS", "username": "admin"}
+{"ts": "2025-11-05T17:10:47.364040+00:00", "event": "REGISTER_SUCCESS", "username": "admin", "meta": {"bootstrap": true}}
+{"ts": "2025-11-05T17:11:08.006597+00:00", "event": "LOGIN_SUCCESS", "username": "admin"}
+{"ts": "2025-11-05T17:11:11.900246+00:00", "event": "ADMIN_LIST_USERS", "username": "admin", "meta": {"count": 1}}
+{"ts": "2025-11-05T17:11:17.419723+00:00", "event": "LOGOUT", "username": "admin"}
+{"ts": "2025-11-05T17:11:26.590968+00:00", "event": "REGISTER_SUCCESS", "username": "ralf"}
+{"ts": "2025-11-05T17:11:33.713769+00:00", "event": "LOGIN_SUCCESS", "username": "ralf"}
+{"ts": "2025-11-05T17:12:12.490398+00:00", "event": "LOGOUT", "username": "ralf"}
+{"ts": "2025-11-05T17:12:19.975804+00:00", "event": "LOGIN_SUCCESS", "username": "admin"}
+{"ts": "2025-11-05T17:13:25.672895+00:00", "event": "ADMIN_LIST_USERS", "username": "admin", "meta": {"count": 2}}
+{"ts": "2025-11-05T17:14:42.221015+00:00", "event": "LOGIN_SUCCESS", "username": "ralf"}
+{"ts": "2025-11-05T17:18:53.917298+00:00", "event": "LOGIN_SUCCESS", "username": "admin"}
+{"ts": "2025-11-05T17:19:00.662118+00:00", "event": "ADMIN_LIST_USERS", "username": "admin", "meta": {"count": 2}}
+{"ts": "2025-11-05T17:46:13.861356+00:00", "event": "LOGIN_SUCCESS", "username": "ralf"}
+{"ts": "2025-11-05T17:53:08.224001+00:00", "event": "LOGIN_SUCCESS", "username": "ralf"}
+{"ts": "2025-11-05T17:53:29.623340+00:00", "event": "LOGIN_SUCCESS", "username": "ralf"}
+{"ts": "2025-11-05T17:53:59.317609+00:00", "event": "LOGIN_FAIL", "username": "ralf", "meta": {"reason": "already_logged_in"}}
+{"ts": "2025-11-05T17:54:15.938557+00:00", "event": "LOGOUT", "username": "ralf"}
+{"ts": "2025-11-05T17:54:18.768864+00:00", "event": "LOGIN_SUCCESS", "username": "ralf"}
+{"ts": "2025-11-05T17:54:28.548753+00:00", "event": "LOGOUT", "username": "ralf"}
+{"ts": "2025-11-05T17:54:37.041351+00:00", "event": "LOGIN_SUCCESS", "username": "ralf"}
+{"ts": "2025-11-05T17:54:46.191152+00:00", "event": "LOGIN_SUCCESS", "username": "admin"}
+{"ts": "2025-11-05T17:54:49.749245+00:00", "event": "LOGOUT", "username": "admin"}
+{"ts": "2025-11-05T17:54:54.922354+00:00", "event": "LOGIN_FAIL", "username": "ralf", "meta": {"reason": "already_logged_in"}}
+{"ts": "2025-11-05T17:57:09.582571+00:00", "event": "LOGIN_SUCCESS", "username": "admin"}
+{"ts": "2025-11-05T17:57:44.931052+00:00", "event": "ADMIN_LIST_USERS", "username": "admin", "meta": {"count": 2}}

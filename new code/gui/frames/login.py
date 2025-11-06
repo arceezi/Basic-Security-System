@@ -17,8 +17,12 @@ class LoginFrame(ttk.Frame):
         ttk.Label(container, text="Login", style="Header.TLabel").pack(anchor="center", pady=(8, 12))
 
         self.banner = Banner(container)
+        self.freeze_countdown_var = tk.StringVar()
+        self.freeze_countdown_label = ttk.Label(container, textvariable=self.freeze_countdown_var, foreground="#c00")
+        self.freeze_countdown_label.pack(anchor="center")
         if is_system_frozen():
             self.banner.show("System is frozen. Try again later or contact admin.")
+            self._start_freeze_countdown()
 
         form = ttk.Frame(container)
         form.pack(anchor="center", pady=8)
@@ -45,9 +49,26 @@ class LoginFrame(ttk.Frame):
         ok, message = authenticate(username, password)
         self.msg.set(message)
         self.app.set_status(message)
-
+        if not ok and is_system_frozen():
+            self.banner.show(message)
+            self._start_freeze_countdown()
+        else:
+            self.banner.hide()
+            self.freeze_countdown_var.set("")
         if ok:
             self.app.show_files()
+
+    def _start_freeze_countdown(self):
+        from auth_manager import freeze_remaining_seconds, is_system_frozen
+        def update():
+            if is_system_frozen():
+                secs = freeze_remaining_seconds()
+                self.freeze_countdown_var.set(f"System frozen: {secs if secs else '?'} seconds left")
+                self.after(1000, update)
+            else:
+                self.freeze_countdown_var.set("")
+                self.banner.hide()
+        update()
 
 
 class LoginApp(tk.Tk):

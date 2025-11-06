@@ -27,6 +27,10 @@ class App(tk.Tk):
     def set_status(self, msg: str) -> None:
         self.status_var.set(msg)
 
+    def show_toast(self, msg: str, duration=2000):
+        from .widgets import Toast
+        Toast(self, msg, duration)
+
     def navigate(self, frame_cls, **kwargs) -> None:
         # Destroy current frame, create new
         for child in self.container.winfo_children():
